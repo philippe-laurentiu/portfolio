@@ -1,8 +1,11 @@
 import React, {} from 'react'
+import Header from '../components/Header'
 
 
 const Landingpage = () => {
-    return <p>hello</p>
+    return (
+        <Header />
+    )
 }
 
 export default Landingpage
