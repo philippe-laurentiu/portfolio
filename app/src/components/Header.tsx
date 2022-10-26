@@ -1,4 +1,5 @@
 const Header = () => {
+    console.log("hase")
     return <p>Header</p>
 }
 
