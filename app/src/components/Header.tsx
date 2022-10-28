@@ -1,8 +1,11 @@
 import { Toolbar, AppBar, IconButton, Button } from "@material-ui/core"
 import Typography from "@material-ui/core/Typography"
 import MenuIcon from "@material-ui/icons/Menu"
+import { useTranslation } from "react-i18next"
 
 const Header = () => {
+
+    const [t, i18n] = useTranslation("common")
     return (
         <AppBar>
             <Toolbar>
@@ -11,13 +14,21 @@ const Header = () => {
                     </MenuIcon>
                 </IconButton>
                 <Typography variant="h6">
-                    Portfolio
+                    { t('welcome.title', {framework:'React'}) }
                 </Typography>
                 <Button
                     variant='contained'
                     color='secondary'
+                    onClick={() => i18n.changeLanguage('de')}
                 >
-                    Test
+                    DE
+                </Button>
+                <Button
+                    variant='contained'
+                    color='secondary'
+                    onClick={() => i18n.changeLanguage('en')}
+                >
+                    EN
                 </Button>
             </Toolbar>
         </AppBar>

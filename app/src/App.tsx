@@ -5,6 +5,23 @@ import { orange } from '@mui/material/colors'
 import { yellow } from '@material-ui/core/colors'
 import 'fontsource-roboto'
 import { Container } from '@material-ui/core'
+import {I18nextProvider} from "react-i18next";
+import i18next from "i18next";
+import common_de from "./translations/de/common.json";
+import common_en from "./translations/en/common.json";
+
+i18next.init({
+    interpolation: { escapeValue: false },  // React already does escaping
+    lng: 'en',                              // language to use
+    resources: {
+        en: {
+            common: common_en               // 'common' is our custom namespace
+        },
+        de: {
+            common: common_de
+        },
+    },
+});
 
 const theme = createTheme ({
   typography: {
@@ -25,11 +42,13 @@ const theme = createTheme ({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="xs">
-        <div className="App">
-          <Landingpage />
-        </div>
-      </Container>
+      <I18nextProvider i18n={i18next}>
+        <Container maxWidth="xs">
+          <div className="App">
+            <Landingpage />
+          </div>
+        </Container>
+      </I18nextProvider>
     </ThemeProvider>
   );
 }
