@@ -5,6 +5,7 @@ import Checkbox from '@material-ui/core/Checkbox'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
+import Container from '@material-ui/core/Container'
 
 
 const Landingpage = () => {
@@ -13,6 +14,7 @@ const Landingpage = () => {
     return (
         <div>
             <Header />
+            <Container>
             <Typography variant="h2" component="div">
                 Test
             </Typography>
@@ -43,6 +45,7 @@ const Landingpage = () => {
                 checked={checked}
                 onClick={() => setChecked(!checked)}
             />
+            </Container>
         </div>
     )
 }

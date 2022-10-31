@@ -4,7 +4,7 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles'
 import { orange } from '@mui/material/colors'
 import { yellow } from '@material-ui/core/colors'
 import 'fontsource-roboto'
-import { Container } from '@material-ui/core'
+import Container from '@material-ui/core/Container'
 import {I18nextProvider} from "react-i18next";
 import i18next from "i18next";
 import common_de from "./translations/de/common.json";
@@ -43,7 +43,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <I18nextProvider i18n={i18next}>
-        <Container maxWidth="xs">
+        <Container>
           <div className="App">
             <Landingpage />
           </div>
