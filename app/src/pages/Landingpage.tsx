@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
-import BurgerDrawer from '../components/BurgerDrawer'
 
 
 const Landingpage = () => {
@@ -30,7 +29,6 @@ const Landingpage = () => {
     return (
         <div>
             <Header />
-            <BurgerDrawer />
             <Container>
             <Typography variant="h2" component="div">
                 Test

@@ -6,12 +6,12 @@ type Test = {
     setToggle: (val: boolean) => void
   }
 
-const BurgerDrawer = ({toggle, setToggle}: Test) => {
+const LanguageDrawer = ({toggle, setToggle}: Test) => {
     // useKey('Enter', () => setToggle(!toggle))
     return (
         <SwipeableDrawer
-            className='burgerDrawer'
-            anchor='left'
+            className='LanguageDrawer'
+            anchor='right'
             open={toggle}
             onClose={() => setToggle(false)}
             onOpen={() => setToggle(true)}
@@ -21,4 +21,4 @@ const BurgerDrawer = ({toggle, setToggle}: Test) => {
     )
 }
 
-export default BurgerDrawer
+export default LanguageDrawer
