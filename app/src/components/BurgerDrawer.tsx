@@ -1,5 +1,11 @@
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import useKey from '../hooks/useKey'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemButton from '@material-ui/core/ListItemButton'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+import HomeIcon from '@material-ui/icons/Home'
 
 type Test = {
     toggle: boolean,
@@ -16,7 +22,16 @@ const BurgerDrawer = ({toggle, setToggle}: Test) => {
             onClose={() => setToggle(false)}
             onOpen={() => setToggle(true)}
         >
-        <p>test a bit of space</p>
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary={"home"} />
+            </ListItemButton>
+          </ListItem>
+        </List>
       </SwipeableDrawer>
     )
 }
