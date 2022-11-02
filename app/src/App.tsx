@@ -1,5 +1,4 @@
 import './App.css'
-import Landingpage from './pages/Landingpage'
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'
 import { orange } from '@mui/material/colors'
 import { yellow } from '@material-ui/core/colors'
@@ -9,6 +8,7 @@ import {I18nextProvider} from "react-i18next";
 import i18next from "i18next";
 import common_de from "./translations/de/common.json";
 import common_en from "./translations/en/common.json";
+import Pagelayout from './Pagelayout'
 
 i18next.init({
     interpolation: { escapeValue: false },  // React already does escaping
@@ -45,7 +45,7 @@ function App() {
       <I18nextProvider i18n={i18next}>
         <Container>
           <div className="App">
-            <Landingpage />
+            <Pagelayout />
           </div>
         </Container>
       </I18nextProvider>

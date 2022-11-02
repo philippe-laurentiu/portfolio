@@ -18,6 +18,18 @@ type ToggleDrawer = {
 const LanguageDrawer = ({toggle, setToggle}: ToggleDrawer) => {
     const [t, i18n] = useTranslation("common")
     // useKey('Enter', () => setToggle(!toggle))
+
+    const lang = [
+      {
+        langText: "German",
+        langCode: "de"
+      },
+      {
+        langText: "English",
+        langCode: "en"
+      }
+    ]
+
     return (
         <SwipeableDrawer
             className='LanguageDrawer'
@@ -27,13 +39,12 @@ const LanguageDrawer = ({toggle, setToggle}: ToggleDrawer) => {
             onOpen={() => setToggle(true)}
         >
         <List>
-          {['english', 'German'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                {/* <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon> */}
-                <ListItemText primary={text} />
+          {lang.map((data, key) => (
+            <ListItem key={key} disablePadding>
+              <ListItemButton 
+                onClick={() => i18n.changeLanguage(data.langCode)}
+              >
+                <ListItemText primary={data.langText} />
               </ListItemButton>
             </ListItem>
           ))}
