@@ -14,7 +14,11 @@ const Header = () => {
 
     return (
         <AppBar position="static">
-            <Toolbar>
+            <Toolbar
+                sx={{
+                    backgroundColor: 'primary.dark',
+                }} 
+            >
                 <IconButton
                     onClick={() => setToggleBurger(!toggleBurger)}
                 >

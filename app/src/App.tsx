@@ -1,7 +1,7 @@
 import './App.css'
 import { ThemeProvider, createTheme } from '@material-ui/core/styles'
-import { orange } from '@mui/material/colors'
-import { yellow } from '@material-ui/core/colors'
+import { lightBlue, orange } from '@mui/material/colors'
+import { grey, yellow } from '@material-ui/core/colors'
 import 'fontsource-roboto'
 import Container from '@material-ui/core/Container'
 import {I18nextProvider} from "react-i18next";
@@ -31,10 +31,16 @@ const theme = createTheme ({
   },
   palette: {
     primary: {
-      main: orange[500]
+      light: '#757ce8',
+      main: '#3f50b5',
+      dark: '#002884',
+      contrastText: '#fff',
     },
     secondary: {
-      main: yellow[500]
+      light: '#ff7961',
+      main: '#f44336',
+      dark: '#ba000d',
+      contrastText: '#000',
     }
   }
 })
