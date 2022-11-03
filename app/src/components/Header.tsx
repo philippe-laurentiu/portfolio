@@ -16,7 +16,7 @@ const Header = () => {
         <AppBar position="static">
             <Toolbar
                 sx={{
-                    backgroundColor: 'primary.dark',
+                    backgroundColor: 'primary.main',
                 }} 
             >
                 <IconButton
@@ -28,20 +28,6 @@ const Header = () => {
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     { t('welcome.title', {framework:'React'}) }
                 </Typography>
-                {/* <Button
-                    variant='contained'
-                    color='secondary'
-                    onClick={() => i18n.changeLanguage('de')}
-                >
-                    DE
-                </Button>
-                <Button
-                    variant='contained'
-                    color='secondary'
-                    onClick={() => i18n.changeLanguage('en')}
-                >
-                    EN
-                </Button> */}
                 <Button
                     variant='contained'
                     color='secondary'
