@@ -1,14 +1,13 @@
 import Container from '@material-ui/core/Container'
 
-
 const About = () => {
-    return (
+  return (
         <div>
             <Container>
                 <p>About</p>
             </Container>
         </div>
-    )
+  )
 }
 
 export default About
