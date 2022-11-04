@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-const useKey = (key: string, cb: any) => {
+const useKey = (key: string, cb: any): any => {
   const callbackRef = useRef(cb)
 
   useEffect(() => {
@@ -8,7 +8,7 @@ const useKey = (key: string, cb: any) => {
   })
 
   useEffect(() => {
-    const handle = (e: KeyboardEvent) => {
+    const handle = (e: KeyboardEvent): any => {
       // if (e.code === key) {
       //     callbackRef.current(e)
       // }

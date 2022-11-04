@@ -1,6 +1,7 @@
+import React from 'react'
 import Container from '@material-ui/core/Container'
 
-const About = () => {
+const About = (): any => {
   return (
         <div>
             <Container>

@@ -5,14 +5,15 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemButton from '@material-ui/core/ListItemButton'
 import ListItemText from '@material-ui/core/ListItemText'
 import { useTranslation } from 'react-i18next'
+import { TFunction } from 'i18next'
 
 interface ToggleDrawer {
   toggle: boolean
   setToggle: (val: boolean) => void
 }
 
-const LanguageDrawer = ({ toggle, setToggle }: ToggleDrawer) => {
-  const [t, i18n] = useTranslation('common')
+const LanguageDrawer = ({ toggle, setToggle }: ToggleDrawer): any => {
+  const [,i18n] = useTranslation('common')
   // useKey('Enter', () => setToggle(!toggle))
 
   const lang = [
@@ -47,7 +48,7 @@ const LanguageDrawer = ({ toggle, setToggle }: ToggleDrawer) => {
           {lang.map((data, key) => (
             <ListItem key={key} disablePadding>
               <ListItemButton
-                onClick={async () => await i18n.changeLanguage(data.langCode)}
+                onClick={async (): Promise<TFunction> => await i18n.changeLanguage(data.langCode)}
               >
                 <ListItemText primary={data.langText} />
               </ListItemButton>

@@ -60,7 +60,7 @@ const theme = createTheme({
 //   },
 // ]);
 
-function App () {
+const App = (): any => {
   return (
     <ThemeProvider theme={theme}>
       <I18nextProvider i18n={i18next}>

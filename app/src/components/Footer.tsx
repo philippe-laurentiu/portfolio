@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
-import { useTheme } from '@material-ui/core/styles'
 
-const Footer = () => {
+const Footer = (): any => {
   const [value, setValue] = useState(0)
-  const theme = useTheme()
   return (
         <BottomNavigation
             showLabels

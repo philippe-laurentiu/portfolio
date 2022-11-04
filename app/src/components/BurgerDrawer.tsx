@@ -12,7 +12,7 @@ interface Test {
   setToggle: (val: boolean) => void
 }
 
-const BurgerDrawer = ({ toggle, setToggle }: Test) => {
+const BurgerDrawer = ({ toggle, setToggle }: Test): any => {
   // useKey('Enter', () => setToggle(!toggle))
   return (
         <SwipeableDrawer

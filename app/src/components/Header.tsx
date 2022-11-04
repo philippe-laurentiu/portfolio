@@ -7,8 +7,8 @@ import { useTranslation } from 'react-i18next'
 import BurgerDrawer from '../components/BurgerDrawer'
 import LanguageDrawer from './LanguageDrawer'
 
-const Header = () => {
-  const [t, i18n] = useTranslation('common')
+const Header = (): any => {
+  const [t] = useTranslation('common')
   const [toggleBurger, setToggleBurger] = useState(false)
   const [toggleLanguage, setToggleLanguage] = useState(false)
 
