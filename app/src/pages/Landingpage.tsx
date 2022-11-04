@@ -13,38 +13,37 @@ const Landingpage = () => {
 
     return (
         <div>
-            <Header />
             <Container>
-            <Typography variant="h2" component="div">
-                Test
-            </Typography>
+                <Typography variant="h2" component="div">
+                    Test
+                </Typography>
 
-            <Grid container spacing={4} justifyContent="center">
-                <Grid item>
-                    <Paper style={{width: "50px", height: "70px", backgroundColor: "yellow" }}/>
+                <Grid container spacing={4} justifyContent="center">
+                    <Grid item>
+                        <Paper style={{width: "50px", height: "70px", backgroundColor: "yellow" }}/>
+                    </Grid>
+                    <Grid item>
+                        <Paper style={{width: "50px", height: "70px", backgroundColor: "yellow" }}/>
+                    </Grid>
+                    <Grid item>
+                        <Paper style={{width: "50px", height: "70px", backgroundColor: "yellow" }}/>
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <Paper style={{width: "50px", height: "70px", backgroundColor: "yellow" }}/>
-                </Grid>
-                <Grid item>
-                    <Paper style={{width: "50px", height: "70px", backgroundColor: "yellow" }}/>
-                </Grid>
-            </Grid>
-            <Button
-                variant='contained'
-            >
-                primary
-            </Button>
-            <Button
-                variant='contained'
-                color='secondary'
-            >
-                secondary
-            </Button>
-            <Checkbox 
-                checked={checked}
-                onClick={() => setChecked(!checked)}
-            />
+                <Button
+                    variant='contained'
+                >
+                    primary
+                </Button>
+                <Button
+                    variant='contained'
+                    color='secondary'
+                >
+                    secondary
+                </Button>
+                <Checkbox 
+                    checked={checked}
+                    onClick={() => setChecked(!checked)}
+                />
             </Container>
         </div>
     )

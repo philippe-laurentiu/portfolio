@@ -9,13 +9,17 @@ import i18next from "i18next";
 import common_de from "./translations/de/common.json";
 import common_en from "./translations/en/common.json";
 import Pagelayout from './Pagelayout'
+import About from './pages/About'
 import ErrorPage from './pages/Errorpage'
 
 import {
   createBrowserRouter,
   RouterProvider,
+  BrowserRouter,
   Route,
+  Routes,
 } from "react-router-dom";
+import Landingpage from './pages/Landingpage'
 
 i18next.init({
     interpolation: { escapeValue: false },  // React already does escaping
@@ -52,20 +56,32 @@ const theme = createTheme ({
   }
 })
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Pagelayout />,
-    errorElement: <ErrorPage />,
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Pagelayout />,
+//     errorElement: <ErrorPage />,
+//   },
+// ]);
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <I18nextProvider i18n={i18next}>
         <Container>
-          <RouterProvider router={router} />
+          {/* <RouterProvider router={router} /> */}
+
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Pagelayout />}>
+                <Route index element={<Landingpage />} />
+                <Route path="about" element={<About />} />
+                <Route path="*" element={<ErrorPage />} />
+              </Route>
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </BrowserRouter>
+
           {/* <div className="App">
             <Pagelayout />
           </div> */}
