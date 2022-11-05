@@ -8,7 +8,6 @@ import common_en from './translations/en/common.json'
 import Pagelayout from './Pagelayout'
 import About from './pages/About'
 import ErrorPage from './pages/Errorpage'
-import Container from '@material-ui/core/Container'
 import Landingpage from './pages/Landingpage'
 
 import {
@@ -64,7 +63,6 @@ const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <I18nextProvider i18n={i18next}>
-        <Container>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Pagelayout />}>
@@ -75,7 +73,6 @@ const App = (): JSX.Element => {
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </BrowserRouter>
-        </Container>
       </I18nextProvider>
     </ThemeProvider>
   )

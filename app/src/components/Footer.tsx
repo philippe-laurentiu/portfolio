@@ -16,8 +16,7 @@ const Footer = (): JSX.Element => {
               position: 'fixed',
               bottom: 0,
               height: '64px',
-              right: '24px',
-              left: '24px'
+              width: '100%'
             }}
         >
             <BottomNavigationAction label="Recents" />
