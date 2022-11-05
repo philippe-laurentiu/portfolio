@@ -9,13 +9,13 @@ import Pagelayout from './Pagelayout'
 import About from './pages/About'
 import ErrorPage from './pages/Errorpage'
 import Container from '@material-ui/core/Container'
+import Landingpage from './pages/Landingpage'
 
 import {
   BrowserRouter,
   Route,
   Routes
 } from 'react-router-dom'
-import Landingpage from './pages/Landingpage'
 
 i18next.init({
   interpolation: { escapeValue: false }, // React already does escaping
@@ -28,7 +28,7 @@ i18next.init({
       common: common_de
     }
   }
-})
+}).then(() => {}).catch(() => { console.error('catch') })
 
 const theme = createTheme({
   typography: {
