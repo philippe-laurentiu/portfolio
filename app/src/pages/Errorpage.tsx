@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ErrorPage = (): any => {
+const ErrorPage = (): JSX.Element => {
   return (
     <div id="error-page">
       <h1>Oops!</h1>

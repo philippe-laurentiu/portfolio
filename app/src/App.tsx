@@ -60,13 +60,11 @@ const theme = createTheme({
 //   },
 // ]);
 
-const App = (): any => {
+const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <I18nextProvider i18n={i18next}>
         <Container>
-          {/* <RouterProvider router={router} /> */}
-
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Pagelayout />}>
@@ -77,10 +75,6 @@ const App = (): any => {
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </BrowserRouter>
-
-          {/* <div className="App">
-            <Pagelayout />
-          </div> */}
         </Container>
       </I18nextProvider>
     </ThemeProvider>

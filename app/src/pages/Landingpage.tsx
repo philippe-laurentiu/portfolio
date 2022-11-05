@@ -6,7 +6,7 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
 
-const Landingpage = (): any => {
+const Landingpage = (): JSX.Element => {
   const [checked, setChecked] = useState(false)
 
   return (

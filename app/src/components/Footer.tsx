@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
 
-const Footer = (): any => {
+const Footer = (): JSX.Element => {
   const [value, setValue] = useState(0)
   return (
         <BottomNavigation

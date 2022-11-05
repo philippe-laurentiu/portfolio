@@ -12,7 +12,7 @@ interface Test {
   setToggle: (val: boolean) => void
 }
 
-const BurgerDrawer = ({ toggle, setToggle }: Test): any => {
+const BurgerDrawer = ({ toggle, setToggle }: Test): JSX.Element => {
   // useKey('Enter', () => setToggle(!toggle))
   return (
         <SwipeableDrawer
@@ -21,8 +21,7 @@ const BurgerDrawer = ({ toggle, setToggle }: Test): any => {
               backgroundColor: 'primary.light',
               width: '200px',
               height: 'auto',
-              marginTop: '64px',
-              marginLeft: '24px'
+              marginTop: '64px'
             }
           }}
           anchor='left'

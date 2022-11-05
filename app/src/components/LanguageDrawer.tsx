@@ -33,8 +33,7 @@ const LanguageDrawer = ({ toggle, setToggle }: ToggleDrawer): any => {
               backgroundColor: 'primary.light',
               width: '200px',
               height: 'auto',
-              marginTop: '64px',
-              marginRight: '24px'
+              marginTop: '64px'
             }
           }}
           anchor='right'
