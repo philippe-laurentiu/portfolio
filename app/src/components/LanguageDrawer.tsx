@@ -46,10 +46,7 @@ const LanguageDrawer = ({ toggle, setToggle }: ToggleDrawer): any => {
           {lang.map((data, key) => (
             <ListItem key={key} disablePadding>
               <ListItemButton
-                onClick={ () =>
-                  async () => { await i18n.changeLanguage(data.langCode) }
-                }
-              >
+                onClick={ async () => await i18n.changeLanguage(data.langCode) }>
                 <ListItemText primary={data.langText} />
               </ListItemButton>
             </ListItem>

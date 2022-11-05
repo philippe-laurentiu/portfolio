@@ -16,7 +16,7 @@ import {
   Routes
 } from 'react-router-dom'
 
-i18next.init({
+await i18next.init({
   interpolation: { escapeValue: false }, // React already does escaping
   lng: 'en', // language to use
   resources: {
@@ -27,7 +27,7 @@ i18next.init({
       common: common_de
     }
   }
-}).then(() => {}).catch(() => { console.error('catch') })
+})
 
 const theme = createTheme({
   typography: {
