@@ -8,7 +8,7 @@ import common_en from './translations/en/common.json'
 import Pagelayout from './Pagelayout'
 import About from './pages/About'
 import ErrorPage from './pages/Errorpage'
-import Landingpage from './pages/Landingpage'
+import Home from './pages/Home'
 
 import {
   BrowserRouter,
@@ -66,7 +66,7 @@ const App = (): JSX.Element => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Pagelayout />}>
-                <Route index element={<Landingpage />} />
+                <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="*" element={<ErrorPage />} />
               </Route>
