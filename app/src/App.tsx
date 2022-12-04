@@ -16,18 +16,20 @@ import {
   Routes
 } from 'react-router-dom'
 
-await i18next.init({
-  interpolation: { escapeValue: false }, // React already does escaping
-  lng: 'en', // language to use
-  resources: {
-    en: {
-      common: common_en // 'common' is our custom namespace
-    },
-    de: {
-      common: common_de
+const initLanguage = async (): Promise<any> => {
+  await i18next.init({
+    interpolation: { escapeValue: false }, // React already does escaping
+    lng: 'en', // language to use
+    resources: {
+      en: {
+        common: common_en // 'common' is our custom namespace
+      },
+      de: {
+        common: common_de
+      }
     }
-  }
-})
+  })
+}
 
 const theme = createTheme({
   typography: {
@@ -51,15 +53,8 @@ const theme = createTheme({
   }
 })
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Pagelayout />,
-//     errorElement: <ErrorPage />,
-//   },
-// ]);
-
 const App = (): JSX.Element => {
+  initLanguage().catch(() => console.log('do some error handling'))
   return (
     <ThemeProvider theme={theme}>
       <I18nextProvider i18n={i18next}>
