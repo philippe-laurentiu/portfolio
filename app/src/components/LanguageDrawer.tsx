@@ -5,12 +5,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemButton from '@material-ui/core/ListItemButton'
 import ListItemText from '@material-ui/core/ListItemText'
 import { useTranslation } from 'react-i18next'
-// import { TFunction } from 'i18next'
-
-interface ToggleDrawer {
-  toggle: boolean
-  setToggle: (val: boolean) => void
-}
+import { ToggleDrawer } from './drawer/Drawer'
 
 const LanguageDrawer = ({ toggle, setToggle }: ToggleDrawer): any => {
   const [,i18n] = useTranslation('common')

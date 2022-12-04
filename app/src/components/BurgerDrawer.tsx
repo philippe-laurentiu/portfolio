@@ -6,13 +6,9 @@ import ListItemButton from '@material-ui/core/ListItemButton'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
+import { ToggleDrawer } from './drawer/Drawer'
 
-interface Test {
-  toggle: boolean
-  setToggle: (val: boolean) => void
-}
-
-const BurgerDrawer = ({ toggle, setToggle }: Test): JSX.Element => {
+const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
   // useKey('Enter', () => setToggle(!toggle))
   return (
         <SwipeableDrawer
