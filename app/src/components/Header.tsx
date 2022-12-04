@@ -4,8 +4,8 @@ import Typography from '@material-ui/core/Typography'
 import MenuIcon from '@material-ui/icons/Menu'
 import TranslateIcon from '@material-ui/icons/Translate'
 import { useTranslation } from 'react-i18next'
-import BurgerDrawer from '../components/BurgerDrawer'
-import LanguageDrawer from './LanguageDrawer'
+import BurgerDrawer from './drawer/BurgerDrawer'
+import LanguageDrawer from './drawer/LanguageDrawer'
 import Drawer from './drawer/Drawer'
 
 const Header = (): JSX.Element => {

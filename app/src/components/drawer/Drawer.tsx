@@ -6,7 +6,6 @@ export interface ToggleDrawer {
 }
 
 const Drawer = (props: any): JSX.Element => {
-  console.log(props.children)
   return (
     <div>{props.children}</div>
   )
