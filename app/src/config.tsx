@@ -6,11 +6,11 @@ interface NavigationElement {
 export const navigation = {
   home: {
     path: '/',
-    pathVal: 0
+    pathVal: 1
   },
   about: {
     path: '/about',
-    pathVal: 1
+    pathVal: 0
   }
 }
 

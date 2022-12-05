@@ -19,10 +19,10 @@ const Footer = (): JSX.Element => {
     <BottomNavigation
       showLabels
       value={value}
-      onChange={(event, newValue) => {
-        console.log(newValue)
-        setValue(newValue)
-      }}
+      // onChange={(event, newValue) => {
+      //   console.log(newValue)
+      //   setValue(newValue)
+      // }}
       sx={{
         backgroundColor: 'primary.main',
         position: 'fixed',
