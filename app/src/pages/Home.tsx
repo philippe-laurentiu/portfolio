@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import Container from '@material-ui/core/Container'
 import { TestImage, TestText } from './PageFragments'
+import testImg from '../assets/test.jpg'
+import AsymmetricImage from '../components/AsymmetricImage'
 
 const Home = (): JSX.Element => {
   return (
@@ -26,7 +28,7 @@ const Home = (): JSX.Element => {
                       backgroundColor: 'yellow',
                       padding: '20px'
                     }}>
-                      <TestImage />
+                      <AsymmetricImage image={testImg} />
                     </Box>
                 </Grid>
                 <Grid item>

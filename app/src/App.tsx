@@ -10,11 +10,7 @@ import About from './pages/About'
 import ErrorPage from './pages/Errorpage'
 import Home from './pages/Home'
 
-import {
-  BrowserRouter,
-  Route,
-  Routes
-} from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 const initLanguage = async (): Promise<any> => {
   await i18next.init({
@@ -31,7 +27,7 @@ const initLanguage = async (): Promise<any> => {
   })
 }
 
-const theme = createTheme({
+const theme1 = createTheme({
   typography: {
     h2: {
       fontSize: 11
@@ -56,8 +52,8 @@ const theme = createTheme({
 const App = (): JSX.Element => {
   initLanguage().catch(() => console.log('do some error handling'))
   return (
-    <ThemeProvider theme={theme}>
-      <I18nextProvider i18n={i18next}>
+      <ThemeProvider theme={theme1}>
+        <I18nextProvider i18n={i18next}>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Pagelayout />}>
@@ -68,8 +64,8 @@ const App = (): JSX.Element => {
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </BrowserRouter>
-      </I18nextProvider>
-    </ThemeProvider>
+        </I18nextProvider>
+      </ThemeProvider>
   )
 }
 
