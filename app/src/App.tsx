@@ -46,6 +46,14 @@ const theme1 = createTheme({
       dark: '#ba000d',
       contrastText: '#000'
     }
+  },
+  components: {
+    MuiContainer: {
+      defaultProps: {
+        maxWidth: false,
+        disableGutters: true
+      }
+    }
   }
 })
 
