@@ -1,17 +1,14 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import { imageWithText } from './PageFragments'
+import { ImageWithText, Title } from './PageFragments'
 
 const Home = (): JSX.Element => {
   return (
     <div>
       <Container>
-        {imageWithText({
-          bgcolor: 'black'
-        })}
-        {imageWithText({
-          bgcolor: 'blue'
-        })}
+        <Title></Title>
+        <ImageWithText bgcolor='black'></ImageWithText>
+        <ImageWithText bgcolor='blue'></ImageWithText>
       </Container>
     </div>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import testImg from '../../assets/test.jpg'
+import testLogo from '../../assets/test_logo.png'
 import AsymmetricImage from '../../components/AsymmetricImage'
 import Typography from '@material-ui/core/Typography'
 
@@ -9,17 +10,19 @@ export interface ImageWithTextInterface {
   bgcolor: string
 }
 
-export const ImageWithText = ({ bgcolor }: ImageWithTextInterface): JSX.Element => {
+export const ImageWithTextFragment = ({ bgcolor }: ImageWithTextInterface): JSX.Element => {
   return (
     <Box width={'100%'} bgcolor={bgcolor}>
-      <Grid container spacing={2} justifyContent='center'>
+      <Grid container spacing={1} justifyContent='center'>
         <Grid item>
           <Box
             sx={{
               width: '400px',
               height: '250px',
               backgroundColor: 'yellow',
-              padding: '20px'
+              padding: '40px',
+              marginLeft: '50px',
+              marginRight: '50px'
             }}
           >
             <AsymmetricImage image={testImg} />
@@ -31,7 +34,9 @@ export const ImageWithText = ({ bgcolor }: ImageWithTextInterface): JSX.Element 
               width: '400px',
               height: '250px',
               backgroundColor: 'yellow',
-              padding: '20px'
+              padding: '40px',
+              marginLeft: '50px',
+              marginRight: '50px'
             }}
           >
             <TestText />
@@ -50,13 +55,23 @@ export const TestImage = (): JSX.Element => {
 
 export const TestText = (): JSX.Element => {
   return (
-        <Typography>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        </Typography>
+    <Box>
+      <Typography gutterBottom={true} variant='h4'>
+        Title
+      </Typography>
+      <TestLogo />
+      <Typography>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
+      </Typography>
+    </Box>
+  )
+}
+
+export const TestLogo = (): JSX.Element => {
+  return (
+    <Box margin={'40px'}>
+      <img src={testLogo} alt='test logo' className='image'/>
+    </Box>
   )
 }
