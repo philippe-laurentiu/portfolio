@@ -2,8 +2,8 @@ import React from 'react'
 import { ImageWithTextFragment, ImageWithTextInterface } from './pagefragments/ImageWithTextfragment'
 import TitleFragment from './pagefragments/TitleFragment'
 
-export const ImageWithText = ({ bgcolor }: ImageWithTextInterface): JSX.Element => {
-  return <ImageWithTextFragment bgcolor={bgcolor} />
+export const ImageWithText = (props: ImageWithTextInterface): JSX.Element => {
+  return <ImageWithTextFragment {...props} />
 }
 
 export const Title = (): JSX.Element => {

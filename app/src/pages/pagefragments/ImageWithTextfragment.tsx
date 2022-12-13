@@ -7,25 +7,28 @@ import AsymmetricImage from '../../components/AsymmetricImage'
 import Typography from '@material-ui/core/Typography'
 
 export interface ImageWithTextInterface {
-  bgcolor: string
+  gradient: string
+  projectImage: string
 }
 
-export const ImageWithTextFragment = ({ bgcolor }: ImageWithTextInterface): JSX.Element => {
+export const ImageWithTextFragment = ({ projectImage, gradient }: ImageWithTextInterface): JSX.Element => {
+  console.log(gradient)
   return (
-    <Box width={'100%'} bgcolor={bgcolor}>
-      <Grid container spacing={1} justifyContent='center'>
+    <Box width={'100%'} sx={{
+      backgroundImage: gradient
+    }}>
+      <Grid container justifyContent='center'>
         <Grid item>
           <Box
             sx={{
               width: '400px',
               height: '250px',
-              backgroundColor: 'yellow',
               padding: '40px',
               marginLeft: '50px',
               marginRight: '50px'
             }}
           >
-            <AsymmetricImage image={testImg} />
+            <AsymmetricImage image={projectImage} />
           </Box>
         </Grid>
         <Grid item>
@@ -33,7 +36,6 @@ export const ImageWithTextFragment = ({ bgcolor }: ImageWithTextInterface): JSX.
             sx={{
               width: '400px',
               height: '250px',
-              backgroundColor: 'yellow',
               padding: '40px',
               marginLeft: '50px',
               marginRight: '50px'
