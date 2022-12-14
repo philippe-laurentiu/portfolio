@@ -1,21 +1,25 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
-import testImg from '../../assets/test.jpg'
-import testLogo from '../../assets/test_logo.png'
 import AsymmetricImage from '../../components/AsymmetricImage'
 import Typography from '@material-ui/core/Typography'
 
 export interface ImageWithTextInterface {
-  gradient: string
+  background: string
   projectImage: string
+  titleLogoText: TitleLogoTextInterface
 }
 
-export const ImageWithTextFragment = ({ projectImage, gradient }: ImageWithTextInterface): JSX.Element => {
-  console.log(gradient)
+export interface TitleLogoTextInterface {
+  title: string
+  logo: string
+  text: string
+}
+
+export const ImageWithTextFragment = ({ projectImage, background, titleLogoText }: ImageWithTextInterface): JSX.Element => {
   return (
     <Box width={'100%'} sx={{
-      backgroundImage: gradient
+      backgroundImage: background
     }}>
       <Grid container justifyContent='center'>
         <Grid item>
@@ -41,7 +45,7 @@ export const ImageWithTextFragment = ({ projectImage, gradient }: ImageWithTextI
               marginRight: '50px'
             }}
           >
-            <TestText />
+            <TitleLogoText {...titleLogoText}/>
           </Box>
         </Grid>
       </Grid>
@@ -49,31 +53,18 @@ export const ImageWithTextFragment = ({ projectImage, gradient }: ImageWithTextI
   )
 }
 
-export const TestImage = (): JSX.Element => {
-  return (
-        <img src={testImg} alt='test image' className='image'/>
-  )
-}
-
-export const TestText = (): JSX.Element => {
+export const TitleLogoText = ({ title, logo, text }: TitleLogoTextInterface): JSX.Element => {
   return (
     <Box>
       <Typography gutterBottom={true} variant='h4'>
-        Title
+        {title}
       </Typography>
-      <TestLogo />
+      <Box margin={'40px'}>
+        <img src={logo} alt='logo' className='image'/>
+      </Box>
       <Typography>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
+          {text}
       </Typography>
-    </Box>
-  )
-}
-
-export const TestLogo = (): JSX.Element => {
-  return (
-    <Box margin={'40px'}>
-      <img src={testLogo} alt='test logo' className='image'/>
     </Box>
   )
 }
