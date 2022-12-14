@@ -1,5 +1,15 @@
 {
     "welcome": {
         "title": "Willkommen bei {{framework}}"
+    },
+    "imageWithText": {
+        "project1": {
+            "title": "Test Titel 1",
+            "text": "Das ist ein test text."
+        },
+        "project2": {
+            "title": "Test Titel 2",
+            "text": "Das ist ein test text"
+        }
     }
 }

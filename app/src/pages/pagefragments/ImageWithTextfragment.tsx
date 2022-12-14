@@ -63,7 +63,7 @@ export const TitleLogoText = ({ title, logo, text }: TitleLogoTextInterface): JS
         <img src={logo} alt='logo' className='image'/>
       </Box>
       <Typography>
-          {text}
+        {text}
       </Typography>
     </Box>
   )
