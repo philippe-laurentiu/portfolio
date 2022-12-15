@@ -12,7 +12,7 @@ export interface ImageWithTextInterface {
 
 export interface TitleLogoTextInterface {
   title: string
-  logo: string
+  logo?: string
   text: string
 }
 
@@ -54,14 +54,22 @@ export const ImageWithTextFragment = ({ projectImage, background, titleLogoText 
 }
 
 export const TitleLogoText = ({ title, logo, text }: TitleLogoTextInterface): JSX.Element => {
+  let logoelement = <></>
+
+  if (logo !== null) {
+    logoelement = (
+      <Box margin={'40px'}>
+        <img src={logo} alt='logo' className='image'/>
+      </Box>
+    )
+  }
+
   return (
     <Box>
       <Typography gutterBottom={true} variant='h4'>
         {title}
       </Typography>
-      <Box margin={'40px'}>
-        <img src={logo} alt='logo' className='image'/>
-      </Box>
+      { logoelement }
       <Typography>
         {text}
       </Typography>
