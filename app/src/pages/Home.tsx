@@ -12,7 +12,7 @@ const Home = (): JSX.Element => {
   return (
     <div>
       <Container>
-        <Title></Title>
+        <Title>hase</Title>
         <ImageWithText
           projectImage={testImg}
           background={gradient('rgba(0,111,255,0)', 'rgba(9,9,121,0.4)')}
