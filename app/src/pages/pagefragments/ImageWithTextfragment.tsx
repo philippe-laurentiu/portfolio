@@ -17,34 +17,28 @@ export interface TitleLogoTextInterface {
 }
 
 export const ImageWithTextFragment = ({ projectImage, background, titleLogoText }: ImageWithTextInterface): JSX.Element => {
+  const style = {
+    width: '400px',
+    height: '250px',
+    padding: '40px',
+    paddingTop: '150px',
+    paddingBottom: '150px',
+    marginLeft: '50px',
+    marginRight: '50px'
+  }
+
   return (
     <Box width={'100%'} sx={{
       backgroundImage: background
     }}>
       <Grid container justifyContent='center'>
         <Grid item>
-          <Box
-            sx={{
-              width: '400px',
-              height: '250px',
-              padding: '40px',
-              marginLeft: '50px',
-              marginRight: '50px'
-            }}
-          >
+          <Box sx={style}>
             <AsymmetricImage image={projectImage} />
           </Box>
         </Grid>
         <Grid item>
-          <Box
-            sx={{
-              width: '400px',
-              height: '250px',
-              padding: '40px',
-              marginLeft: '50px',
-              marginRight: '50px'
-            }}
-          >
+          <Box sx={style}>
             <TitleLogoText {...titleLogoText}/>
           </Box>
         </Grid>
@@ -54,9 +48,9 @@ export const ImageWithTextFragment = ({ projectImage, background, titleLogoText 
 }
 
 export const TitleLogoText = ({ title, logo, text }: TitleLogoTextInterface): JSX.Element => {
-  let logoelement = <></>
+  let logoelement = <Box margin={'40px'}></Box>
 
-  if (logo !== null) {
+  if (typeof logo !== 'undefined') {
     logoelement = (
       <Box margin={'40px'}>
         <img src={logo} alt='logo' className='image'/>

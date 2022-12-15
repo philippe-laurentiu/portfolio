@@ -9,6 +9,8 @@ import Pagelayout from './Pagelayout'
 import About from './pages/About'
 import ErrorPage from './pages/Errorpage'
 import Home from './pages/Home'
+import ProExample from './pages/projects/ProExample'
+import { navigation } from './config'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -66,7 +68,8 @@ const App = (): JSX.Element => {
             <Routes>
               <Route path="/" element={<Pagelayout />}>
                 <Route index element={<Home />} />
-                <Route path="about" element={<About />} />
+                <Route path={navigation.about.path} element={<About />} />
+                <Route path={navigation.proexample.path} element={<ProExample />} />
                 <Route path="*" element={<ErrorPage />} />
               </Route>
               <Route path="*" element={<ErrorPage />} />

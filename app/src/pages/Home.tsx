@@ -5,14 +5,22 @@ import { gradient } from '../utils/calculateGradient'
 import testImg from '../assets/test.jpg'
 import testLogo from '../assets/test_logo.png'
 import { useTranslation } from 'react-i18next'
-// import testLogo from '../assets/test_logo.png'
+import Box from '@mui/material/Box'
 
 const Home = (): JSX.Element => {
   const [t] = useTranslation('common')
   return (
-    <div>
+    <Box>
       <Container>
-        <Title>hase</Title>
+      <ImageWithText
+          projectImage={testImg}
+          background={gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')}
+          titleLogoText={{
+            title: 'Hi there, my name is Philippe!',
+            text: "I'm a software developer based in Kelowna, and  I create high-performance software with the newest technologies."
+          }}
+        />
+        <Title>Projects</Title> {/* todo translation */}
         <ImageWithText
           projectImage={testImg}
           background={gradient('rgba(0,111,255,0)', 'rgba(9,9,121,0.4)')}
@@ -32,7 +40,7 @@ const Home = (): JSX.Element => {
           }}
         />
       </Container>
-    </div>
+    </Box>
   )
 }
 

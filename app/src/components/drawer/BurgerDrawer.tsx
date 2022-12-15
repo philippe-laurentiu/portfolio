@@ -8,6 +8,8 @@ import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
 import { ToggleDrawer } from './Drawer'
 import { useNavigate } from 'react-router-dom'
+import { navigation } from '../../config'
+import { Typography } from '@material-ui/core'
 
 const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
   const navigate = useNavigate()
@@ -29,7 +31,7 @@ const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
     >
       <List>
         <ListItem disablePadding>
-          <ListItemButton onClick={() => navigate('/')}>
+          <ListItemButton onClick={() => navigate(navigation.home.path)}>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
@@ -37,11 +39,21 @@ const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton onClick={() => navigate('/about')}>
+          <ListItemButton onClick={() => navigate(navigation.about.path)}>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText primary={'about'} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem divider>
+          <Typography>
+            Projects
+          </Typography>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton onClick={() => navigate(navigation.proexample.path)}>
+            <ListItemText primary={'Project Example'} />
           </ListItemButton>
         </ListItem>
       </List>

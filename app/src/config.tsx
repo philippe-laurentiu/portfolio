@@ -11,6 +11,10 @@ export const navigation = {
   about: {
     path: '/about',
     pathVal: 0
+  },
+  proexample: {
+    path: '/projects/proexample',
+    pathVal: 2
   }
 }
 
