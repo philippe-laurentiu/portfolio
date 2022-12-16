@@ -46,6 +46,14 @@ const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
             <ListItemText primary={'about'} />
           </ListItemButton>
         </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton onClick={() => navigate(navigation.legalnotice.path)}>
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary={'legalnotice'} /> {/* todo translate */}
+          </ListItemButton>
+        </ListItem>
         <ListItem divider>
           <Typography>
             Projects

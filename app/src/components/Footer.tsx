@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
 import { useNavigate, useLocation } from 'react-router'
-import { getValueForRoute } from '../config'
+import { getValueForRoute, navigation } from '../config'
 
 const Footer = (): JSX.Element => {
   const navigate = useNavigate()
@@ -35,7 +35,11 @@ const Footer = (): JSX.Element => {
         label="About"
         onClick={() => navigate('/about')}
       />
-      <BottomNavigationAction label="Home" onClick={() => navigate('/')} />
+      <BottomNavigationAction label="Home" onClick={() => navigate(navigation.home.path)} /> {/* todo translation */}
+      <BottomNavigationAction
+        label="Legalnotice"
+        onClick={() => navigate(navigation.legalnotice.path)}
+      /> {/* todo translation */}
       <BottomNavigationAction
         label="TODO"
         onClick={() => console.log('TODO')}

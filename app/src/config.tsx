@@ -12,6 +12,14 @@ export const navigation = {
     path: '/about',
     pathVal: 0
   },
+  legalnotice: {
+    path: '/legalnotice',
+    pathVal: 0
+  },
+  certificats: {
+    path: '/certificats',
+    pathVal: 0
+  },
   proexample: {
     path: '/projects/proexample',
     pathVal: 2

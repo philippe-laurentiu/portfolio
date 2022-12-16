@@ -13,6 +13,8 @@ import ProExample from './pages/projects/ProExample'
 import { navigation } from './config'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import LeagalNotice from './pages/LegalNotice'
+import Certificats from './pages/Certificats'
 
 const initLanguage = async (): Promise<any> => {
   await i18next.init({
@@ -69,6 +71,8 @@ const App = (): JSX.Element => {
               <Route path="/" element={<Pagelayout />}>
                 <Route index element={<Home />} />
                 <Route path={navigation.about.path} element={<About />} />
+                <Route path={navigation.legalnotice.path} element={<LeagalNotice />} />
+                <Route path={navigation.certificats.path} element={<Certificats />} />
                 <Route path={navigation.proexample.path} element={<ProExample />} />
                 <Route path="*" element={<ErrorPage />} />
               </Route>
