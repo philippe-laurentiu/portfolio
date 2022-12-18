@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageWithText, Title } from '../PageFragments'
+import { ImageWithText, Title, TwoBoxes } from '../PageFragments'
 import testImg from '../../assets/test.jpg'
 import { gradient } from '../../utils/calculateGradient'
 import Container from '@material-ui/core/Container' // todo @material-ui is not @mui/material
@@ -19,7 +19,8 @@ const ProExampel = (): JSX.Element => {
               text: "I'm a software developer based in Kelowna, and  I create high-performance software with the newest technologies."
             }}
           />
-          <Title>Projects</Title> {/* todo translation */}
+        <Title>{at('Projects')}</Title>
+        <TwoBoxes></TwoBoxes>
       </Container>
     </Box>
   )
