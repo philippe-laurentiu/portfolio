@@ -7,8 +7,7 @@ import Box from '@mui/material/Box'
 import { useAutoTranslation } from '../../hooks/useAutoTranslation'
 
 const ProExampel = (): JSX.Element => {
-  const t = useAutoTranslation()
-  console.log(t('hase'))
+  const [at] = useAutoTranslation()
   return (
     <Box>
       <Container>
@@ -16,7 +15,7 @@ const ProExampel = (): JSX.Element => {
             projectImage={testImg}
             background={gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')}
             titleLogoText={{
-              title: 'Hi there, my name is Philippe!',
+              title: at('Hi there, my name is Philippe!'),
               text: "I'm a software developer based in Kelowna, and  I create high-performance software with the newest technologies."
             }}
           />

@@ -1,7 +1,8 @@
 import { useCallback } from 'react'
 
-export const useAutoTranslation = (): (input: string) => string => {
-  return useCallback((input: string) => {
+export const useAutoTranslation = (): Array<(input: string) => string> => {
+  const at = useCallback((input: string) => {
     return input
   }, [])
+  return [at]
 }
