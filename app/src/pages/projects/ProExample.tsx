@@ -4,8 +4,11 @@ import testImg from '../../assets/test.jpg'
 import { gradient } from '../../utils/calculateGradient'
 import Container from '@material-ui/core/Container' // todo @material-ui is not @mui/material
 import Box from '@mui/material/Box'
+import { useAutoTranslation } from '../../hooks/useAutoTranslation'
 
 const ProExampel = (): JSX.Element => {
+  const t = useAutoTranslation()
+  console.log(t('hase'))
   return (
     <Box>
       <Container>
