@@ -2,7 +2,12 @@ import React from 'react'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 
-export const TwoBoxesFragment = (): JSX.Element => {
+export interface PropsBox {
+  children: React.ReactNode[]
+}
+
+export const TwoBoxesFragment = ({ children }: PropsBox): JSX.Element => {
+  console.log(children)
   const style = {
     width: '400px',
     height: '250px',
@@ -20,12 +25,12 @@ export const TwoBoxesFragment = (): JSX.Element => {
       <Grid container justifyContent='center'>
         <Grid item>
           <Box sx={style}>
-            todo
+            {children[0]}
           </Box>
         </Grid>
         <Grid item>
           <Box sx={style}>
-            todo
+            {children[1]}
           </Box>
         </Grid>
       </Grid>

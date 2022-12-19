@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageWithText, Title, TwoBoxes } from '../PageFragments'
+import { ImageWithText, Title, TwoBoxes, Technology } from '../PageFragments'
 import testImg from '../../assets/test.jpg'
 import { gradient } from '../../utils/calculateGradient'
 import Container from '@material-ui/core/Container' // todo @material-ui is not @mui/material
@@ -8,6 +8,7 @@ import { useAutoTranslation } from '../../hooks/useAutoTranslation'
 
 const ProExampel = (): JSX.Element => {
   const [at] = useAutoTranslation()
+
   return (
     <Box>
       <Container>
@@ -20,7 +21,10 @@ const ProExampel = (): JSX.Element => {
             }}
           />
         <Title>{at('Projects')}</Title>
-        <TwoBoxes></TwoBoxes>
+        <TwoBoxes>
+            <Technology></Technology>
+            <Technology></Technology>
+        </TwoBoxes>
       </Container>
     </Box>
   )

@@ -10,16 +10,16 @@ const ProjectFragment = (): JSX.Element => {
         {at('Project specification')}
       </Typography>
       <Typography>
-        {at('Team Size:')} 
+        {at('Team Size:')}
       </Typography>
       <Typography>
-        {at('Duration:')} 
+        {at('Duration:')}
       </Typography>
       <Typography>
-        {at('Available funds:')} 
+        {at('Available funds:')}
       </Typography>
       <Typography>
-        {at('Organistaion Mehode:')} 
+        {at('Organistaion Mehode:')}
       </Typography>
     </Box>
   )

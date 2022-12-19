@@ -1,7 +1,8 @@
 import React from 'react'
 import { ImageWithTextFragment, ImageWithTextInterface } from './pagefragments/ImageWithTextfragment'
+import { TechnologyFragment } from './pagefragments/TechnologyFragment'
 import { TitleFragment, Props } from './pagefragments/TitleFragment'
-import { TwoBoxesFragment } from './pagefragments/TwoBoxesFragment'
+import { TwoBoxesFragment, PropsBox } from './pagefragments/TwoBoxesFragment'
 
 export const ImageWithText = (props: ImageWithTextInterface): JSX.Element => {
   return <ImageWithTextFragment {...props} />
@@ -11,6 +12,10 @@ export const Title = (props: Props): JSX.Element => {
   return <TitleFragment {...props}></TitleFragment>
 }
 
-export const TwoBoxes = (): JSX.Element => {
-  return <TwoBoxesFragment></TwoBoxesFragment>
+export const TwoBoxes = (props: PropsBox): JSX.Element => {
+  return <TwoBoxesFragment {...props}></TwoBoxesFragment>
+}
+
+export const Technology = (): JSX.Element => {
+  return <TechnologyFragment />
 }

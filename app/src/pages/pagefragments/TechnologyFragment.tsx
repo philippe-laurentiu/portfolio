@@ -4,8 +4,8 @@ import logo_react from '../../assets/logos/logo_react.png'
 
 export const TechnologyFragment = (): JSX.Element => {
   return (
-    <Box width={'100px'} height={'auto'}>
-      <img src={logo_react}></img>
+    <Box>
+      <img src={logo_react} width={'100px'} height={'auto'}></img>
     </Box>
   )
 }
