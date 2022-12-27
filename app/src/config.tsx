@@ -1,33 +1,41 @@
 interface NavigationElement {
   path: string
-  pathVal: number
+  pathVal: string
 }
 
 export const navigation = {
   home: {
     path: '/',
-    pathVal: 1
+    pathVal: 'home'
   },
   about: {
     path: '/about',
-    pathVal: 0
+    pathVal: 'about'
   },
   legalnotice: {
     path: '/legalnotice',
-    pathVal: 0
+    pathVal: 'legalnotice'
   },
   certificats: {
     path: '/certificats',
-    pathVal: 0
+    pathVal: 'certificats'
   },
   proexample: {
     path: '/projects/proexample',
-    pathVal: 2
+    pathVal: 'proexample'
+  },
+  gitHub: {
+    path: 'https://github.com/philippe-laurentiu',
+    pathVal: 'github'
+  },
+  linkedIn: {
+    path: 'https://www.linkedin.com/in/philippelaurentiu/',
+    pathVal: 'linkedin'
   }
 }
 
-export const getValueForRoute = (route: string): number => {
+export const getValueForRoute = (route: string): string => {
   const values = Object.values(navigation)
   const res: NavigationElement | undefined = values.find((val: any) => val.path === route)
-  return (res !== undefined) ? res.pathVal : 0
+  return (res !== undefined) ? res.pathVal : 'home'
 }

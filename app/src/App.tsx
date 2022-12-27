@@ -57,6 +57,16 @@ const theme1 = createTheme({
         maxWidth: false,
         disableGutters: true
       }
+    },
+    MuiBottomNavigationAction: {
+      styleOverrides: {
+        root: {
+          color: 'white',
+          '&.Mui-selected': {
+            color: 'gray'
+          }
+        }
+      }
     }
   }
 })
