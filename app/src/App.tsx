@@ -33,7 +33,11 @@ const initLanguage = async (): Promise<any> => {
 
 const theme1 = createTheme({
   typography: {
+    // body1: {
+    //   color: 'gray'
+    // },
     h2: {
+      color: 'white',
       fontSize: 11
     }
   },
@@ -56,6 +60,20 @@ const theme1 = createTheme({
       defaultProps: {
         maxWidth: false,
         disableGutters: true
+      }
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          color: 'white'
+        }
+      }
+    },
+    MuiListItemText: {
+      styleOverrides: {
+        root: {
+          color: 'white'
+        }
       }
     },
     MuiBottomNavigationAction: {

@@ -17,6 +17,8 @@ const Header = (): JSX.Element => {
     <AppBar position="static">
       <Toolbar
         sx={{
+          height: '50px',
+          minHeight: '50px',
           backgroundColor: 'primary.main'
         }}
       >

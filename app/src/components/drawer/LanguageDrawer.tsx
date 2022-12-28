@@ -8,8 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { ToggleDrawer } from './Drawer'
 
 const LanguageDrawer = ({ toggle, setToggle }: ToggleDrawer): any => {
-  const [,i18n] = useTranslation('common')
-  // useKey('Enter', () => setToggle(!toggle))
+  const [, i18n] = useTranslation('common')
 
   const lang = [
     {
@@ -23,33 +22,35 @@ const LanguageDrawer = ({ toggle, setToggle }: ToggleDrawer): any => {
   ]
 
   return (
-        <SwipeableDrawer
-          PaperProps={{
-            sx: {
-              backgroundColor: 'primary.light',
-              width: '200px',
-              height: 'auto',
-              marginTop: '64px'
-            }
-          }}
-          anchor='right'
-          open={toggle}
-          onClose={() => setToggle(false)}
-          onOpen={() => setToggle(true)}
-        >
-        <List
-        >
-          {lang.map((data, key) => (
-            <ListItem key={key} disablePadding>
-              <ListItemButton
-                onClick={ (): any => i18n.changeLanguage(data.langCode) }>
-                <ListItemText primary={data.langText} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-
-      </SwipeableDrawer>
+    <SwipeableDrawer
+      PaperProps={{
+        sx: {
+          backgroundColor: 'primary.light',
+          width: '200px',
+          height: 'auto',
+          marginTop: '64px'
+        }
+      }}
+      anchor="right"
+      open={toggle}
+      onClose={() => setToggle(false)}
+      onOpen={() => setToggle(true)}
+    >
+      <List>
+        {lang.map((data, key) => (
+          <ListItem key={key} disablePadding>
+            <ListItemButton
+              onClick={(): any => {
+                setToggle(false)
+                return i18n.changeLanguage(data.langCode)
+              }}
+            >
+              <ListItemText primary={data.langText} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </SwipeableDrawer>
   )
 }
 
