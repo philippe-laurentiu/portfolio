@@ -10,10 +10,12 @@ import { ToggleDrawer } from './Drawer'
 import { useNavigate } from 'react-router-dom'
 import { navigation } from '../../config'
 import { Typography } from '@material-ui/core'
+import { useAutoTranslation } from '../../hooks/useAutoTranslation'
 
 const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
   const navigate = useNavigate()
-  // useKey('Enter', () => setToggle(!toggle))
+  const [at] = useAutoTranslation()
+
   return (
     <SwipeableDrawer
       PaperProps={{
@@ -31,37 +33,55 @@ const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
     >
       <List>
         <ListItem disablePadding>
-          <ListItemButton onClick={() => navigate(navigation.home.path)}>
+          <ListItemButton
+            onClick={() => {
+              setToggle(false)
+              navigate(navigation.home.path)
+            }}
+          >
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary={'home'} />
+            <ListItemText primary={at('home')} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton onClick={() => navigate(navigation.about.path)}>
+          <ListItemButton
+            onClick={() => {
+              setToggle(false)
+              navigate(navigation.about.path)
+            }}
+          >
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary={'about'} />
+            <ListItemText primary={at('about')} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton onClick={() => navigate(navigation.legalnotice.path)}>
+          <ListItemButton
+            onClick={() => {
+              setToggle(false)
+              navigate(navigation.legalnotice.path)
+            }}
+          >
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary={'legalnotice'} /> {/* todo translate */}
+            <ListItemText primary={at('legalnotice')} />
           </ListItemButton>
         </ListItem>
         <ListItem divider>
-          <Typography>
-            Projects
-          </Typography>
+          <Typography>Projects</Typography>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton onClick={() => navigate(navigation.proexample.path)}>
-            <ListItemText primary={'Project Example'} />
+          <ListItemButton
+            onClick={() => {
+              setToggle(false)
+              navigate(navigation.proexample.path)
+            }}
+          >
+            <ListItemText primary={at('Project Example')} />
           </ListItemButton>
         </ListItem>
       </List>
