@@ -33,9 +33,12 @@ const initLanguage = async (): Promise<any> => {
 
 const theme1 = createTheme({
   typography: {
-    // body1: {
-    //   color: 'gray'
-    // },
+    body1: {
+      color: '#333333'
+    },
+    h4: {
+      color: '#333333'
+    },
     h2: {
       color: 'white',
       fontSize: 11

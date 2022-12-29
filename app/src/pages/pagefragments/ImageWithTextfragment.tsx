@@ -18,11 +18,11 @@ export interface TitleLogoTextInterface {
 
 export const ImageWithTextFragment = ({ projectImage, background, titleLogoText }: ImageWithTextInterface): JSX.Element => {
   const style = {
-    width: '400px',
+    width: '500px',
     height: '250px',
     padding: '40px',
-    paddingTop: '150px',
-    paddingBottom: '150px',
+    paddingTop: '100px',
+    paddingBottom: '100px',
     marginLeft: '50px',
     marginRight: '50px'
   }

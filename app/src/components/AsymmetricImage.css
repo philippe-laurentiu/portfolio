@@ -1,13 +1,13 @@
 .test {
   background-color: blue;
-  height: 250px;
+  height: auto;
   width: 100%;
   position: absolute;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
-  clip-path: polygon(0 0, 90% 10%, 100% 100%, 10% 100%);
-  transition: clip-path 2s
+  /* clip-path: polygon(0 0, 90% 10%, 100% 100%, 10% 100%);
+  transition: clip-path 2s */
 }
 
 .test:hover {
-  clip-path: polygon(0 0, 10% 90%, 100% 100%, 100% 10%);
+  /* clip-path: polygon(0 0, 10% 90%, 100% 100%, 100% 10%); */
 }
