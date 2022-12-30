@@ -9,7 +9,7 @@ const AsymmetricImage = ({ image }: Image): JSX.Element => {
   return (
     <div
       style={{
-        height: 'auto',
+        height: '250px',
         width: '100%',
         position: 'relative'
       }}

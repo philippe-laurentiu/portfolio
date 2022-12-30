@@ -6,17 +6,21 @@ import Typography from '@material-ui/core/Typography'
 
 export interface ImageWithTextInterface {
   background: string
-  projectImage: string
-  titleLogoText: TitleLogoTextInterface
+  projectImage?: string
+  titleLogoText?: TitleLogoTextInterface
 }
 
 export interface TitleLogoTextInterface {
   title: string
   logo?: string
-  text: string
+  text?: string
 }
 
-export const ImageWithTextFragment = ({ projectImage, background, titleLogoText }: ImageWithTextInterface): JSX.Element => {
+export const ImageWithTextFragment = ({
+  projectImage,
+  background,
+  titleLogoText
+}: ImageWithTextInterface): JSX.Element => {
   const style = {
     width: '500px',
     height: '250px',
@@ -27,46 +31,70 @@ export const ImageWithTextFragment = ({ projectImage, background, titleLogoText 
     marginRight: '50px'
   }
 
+  if (projectImage == null) {
+    style.width = '600px'
+    style.height = '150px'
+  }
+
   return (
-    <Box width={'100%'} sx={{
-      backgroundImage: background
-    }}>
-      <Grid container justifyContent='center'>
-        <Grid item>
-          <Box sx={style}>
-            <AsymmetricImage image={projectImage} />
-          </Box>
-        </Grid>
-        <Grid item>
-          <Box sx={style}>
-            <TitleLogoText {...titleLogoText}/>
-          </Box>
-        </Grid>
+    <Box
+      width={'100%'}
+      sx={{
+        backgroundImage: background
+      }}
+    >
+      <Grid container justifyContent="center">
+        {projectImage != null && (
+          <Grid item>
+            <Box sx={style}>
+              <AsymmetricImage image={projectImage} />
+            </Box>
+          </Grid>
+        )}
+        {titleLogoText != null && (
+          <Grid item>
+            <Box sx={style}>
+              <TitleLogoText {...titleLogoText} />
+            </Box>
+          </Grid>
+        )}
       </Grid>
     </Box>
   )
 }
 
-export const TitleLogoText = ({ title, logo, text }: TitleLogoTextInterface): JSX.Element => {
+export const TitleLogoText = ({
+  title,
+  logo,
+  text
+}: TitleLogoTextInterface): JSX.Element => {
   let logoelement = <Box margin={'40px'}></Box>
 
   if (typeof logo !== 'undefined') {
     logoelement = (
       <Box margin={'40px'}>
-        <img src={logo} alt='logo' className='image'/>
+        <img src={logo} alt="logo" className="image" />
       </Box>
     )
   }
 
+  let titleElement = <Typography gutterBottom={true} variant={'h4'}>
+    {title}
+  </Typography>
+
+  if (text == null) {
+    titleElement = <Typography gutterBottom={true} variant={'h3'}>
+      {title}
+    </Typography>
+  }
+
   return (
     <Box>
-      <Typography gutterBottom={true} variant='h4'>
-        {title}
-      </Typography>
-      { logoelement }
-      <Typography>
-        {text}
-      </Typography>
+      {titleElement}
+      {logoelement}
+      {text != null &&
+        <Typography>{text}</Typography>
+      }
     </Box>
   )
 }

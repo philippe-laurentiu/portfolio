@@ -39,6 +39,9 @@ const theme1 = createTheme({
     h4: {
       color: '#333333'
     },
+    h3: {
+      color: '#333333'
+    },
     h2: {
       color: 'white',
       fontSize: 11
