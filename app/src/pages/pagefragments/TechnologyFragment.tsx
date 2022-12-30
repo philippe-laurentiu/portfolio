@@ -9,7 +9,7 @@ export interface TechnologyFragmentInterface {
 
 export const TechnologyFragment = ({ technologies }: TechnologyFragmentInterface): JSX.Element => {
   const style = {
-    width: '50px',
+    width: '70px',
     height: 'auto',
     padding: '20px'
     // paddingTop: '150px',

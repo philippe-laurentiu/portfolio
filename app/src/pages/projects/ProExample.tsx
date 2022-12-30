@@ -30,7 +30,7 @@ const ProExampel = (): JSX.Element => {
             }}
           />
         <TwoBoxes>
-            <Technology technologies={['react', 'symfony', 'fromio', 'js', 'php', 'drupal']}></Technology>
+            <Technology technologies={['react', 'symfony', 'formio', 'js', 'php', 'drupal', 'mysql']}></Technology>
             <Technology technologies={['go', 'formio']}></Technology>
         </TwoBoxes>
       </Container>
