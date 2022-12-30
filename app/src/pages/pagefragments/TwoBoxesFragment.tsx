@@ -7,7 +7,6 @@ export interface PropsBox {
 }
 
 export const TwoBoxesFragment = ({ children }: PropsBox): JSX.Element => {
-  console.log(children)
   const style = {
     width: '400px',
     height: '250px',
