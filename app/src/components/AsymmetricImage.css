@@ -1,8 +1,8 @@
 .test {
   background-color: blue;
-  height: 250px;
+  height: 100%;
   width: auto;
-  position: absolute;
+  /* position: absolute; */
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
   /* clip-path: polygon(0 0, 90% 10%, 100% 100%, 10% 100%);
   transition: clip-path 2s */

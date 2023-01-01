@@ -15,23 +15,37 @@ const ProExampel = (): JSX.Element => {
     <Box>
       <Container>
         <ImageWithText
-            background={`url(${wspIhkHeader})`}
-            titleLogoText={{
-              title: at('Economic service portal')
-            }}
-          />
+          height={250}
+          background={`url(${wspIhkHeader})`}
+          titleLogoText={{
+            title: at('Economic service portal')
+          }}
+        />
         <Title>{at('Projects')}</Title>
         <ImageWithText
-            projectImage={wspWebsite}
-            background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}
-            titleLogoText={{
-              title: at('Economic service portal'),
-              text: at('The Economic Service Portal.NRW is the central digital gateway for the economy in NRW.')
-            }}
-          />
+          height={250}
+          projectImage={wspWebsite}
+          background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}
+          titleLogoText={{
+            title: at('Economic service portal'),
+            text: at(
+              'The Economic Service Portal.NRW is the central digital gateway for the economy in NRW.'
+            )
+          }}
+        />
         <TwoBoxes>
-            <Technology technologies={['react', 'symfony', 'formio', 'js', 'php', 'drupal', 'mysql']}></Technology>
-            <Technology technologies={['go', 'formio']}></Technology>
+          <Technology
+            technologies={[
+              'react',
+              'symfony',
+              'formio',
+              'js',
+              'php',
+              'drupal',
+              'mysql'
+            ]}
+          ></Technology>
+          <Technology technologies={['go', 'formio']}></Technology>
         </TwoBoxes>
       </Container>
     </Box>

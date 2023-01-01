@@ -16,6 +16,7 @@ const Home = (): JSX.Element => {
     <Box>
       <Container>
         <ImageWithText
+            height={250}
             projectImage={testImg}
             background={gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')}
             titleLogoText={{
@@ -25,6 +26,7 @@ const Home = (): JSX.Element => {
           />
           <Title>{at('Projects')}</Title>
           <ImageWithText
+            height={250}
             projectImage={wspCover}
             // background={gradient('rgba(214,216,215,0)', 'rgba(40,96,147,1)')}
             // background={gradient('rgba(210,214,215,1) 40%', 'rgba(89,151,255,1) 100%')}

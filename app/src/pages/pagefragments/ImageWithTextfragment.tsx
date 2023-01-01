@@ -5,6 +5,7 @@ import AsymmetricImage from '../../components/AsymmetricImage'
 import Typography from '@material-ui/core/Typography'
 
 export interface ImageWithTextInterface {
+  height: number
   background: string
   projectImage?: string
   titleLogoText?: TitleLogoTextInterface
@@ -17,13 +18,15 @@ export interface TitleLogoTextInterface {
 }
 
 export const ImageWithTextFragment = ({
+  height,
   projectImage,
   background,
   titleLogoText
 }: ImageWithTextInterface): JSX.Element => {
+  const h = `${height}px`
   const style = {
     width: '500px',
-    height: '250px',
+    height: h,
     padding: '40px',
     paddingTop: '100px',
     paddingBottom: '100px',
