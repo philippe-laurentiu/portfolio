@@ -1,15 +1,17 @@
 import React from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import TypographyVariantEnum from 'src/enums/TypographyVariantEnum'
 
 export interface Props {
   children: React.ReactNode
+  variant: keyof TypographyVariantEnum
 }
 
-export const TitleFragment = ({ children }: Props): JSX.Element => {
+export const TitleFragment = ({ children, variant }: Props): JSX.Element => {
   return (
     <Box width={'100%'} height={'100px'} textAlign={'center'}>
-      <Typography variant={'h3'} lineHeight={'90px'}>
+      <Typography variant={variant} lineHeight={'90px'}>
         {children}
       </Typography>
     </Box>

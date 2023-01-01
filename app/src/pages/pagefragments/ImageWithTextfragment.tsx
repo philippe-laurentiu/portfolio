@@ -36,7 +36,6 @@ export const ImageWithTextFragment = ({
 
   if (projectImage == null) {
     style.width = '600px'
-    style.height = '150px'
   }
 
   return (

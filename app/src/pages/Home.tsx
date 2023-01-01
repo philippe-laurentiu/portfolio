@@ -24,7 +24,7 @@ const Home = (): JSX.Element => {
               text: at("I'm a software developer based in Kelowna, and  I create high-performance software with the newest technologies.")
             }}
           />
-          <Title>{at('Projects')}</Title>
+          <Title variant='h3'>{at('Projects')}</Title>
           <ImageWithText
             height={250}
             projectImage={wspCover}

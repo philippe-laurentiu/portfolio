@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageWithText, Title, TwoBoxes, Technology } from '../PageFragments'
+import { ImageWithText, TwoBoxes, Title, Technology } from '../PageFragments'
 // import testImg from '../../assets/test.jpg'
 // import { gradient } from '../../utils/calculateGradient'
 import Container from '@material-ui/core/Container' // todo @material-ui is not @mui/material
@@ -15,15 +15,17 @@ const ProExampel = (): JSX.Element => {
     <Box>
       <Container>
         <ImageWithText
-          height={250}
+          height={100}
           background={`url(${wspIhkHeader})`}
           titleLogoText={{
             title: at('Economic service portal')
           }}
         />
-        <Title>{at('Projects')}</Title>
+        <Box paddingTop={'50px'}>
+          <Title variant='h2'>{at('Project description')}</Title>
+        </Box>
         <ImageWithText
-          height={250}
+          height={450}
           projectImage={wspWebsite}
           background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}
           titleLogoText={{
