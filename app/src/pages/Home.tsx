@@ -37,15 +37,6 @@ const Home = (): JSX.Element => {
               text: at('The Economic Service Portal.NRW is the central digital gateway for the economy in NRW.')
             }}
           />
-          {/* <ImageWithText
-            projectImage={testImg}
-            background={gradient('rgba(0,111,255,0.3)', 'rgb(121,71,9,0.8)')}
-            titleLogoText={{
-              title: at('todo'),
-              logo: testLogo,
-              text: at('todo')
-            }}
-        /> */}
         <Box height='60px'></Box>
       </Container>
     </Box>

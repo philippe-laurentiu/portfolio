@@ -33,19 +33,19 @@ const initLanguage = async (): Promise<any> => {
 
 const theme1 = createTheme({
   typography: {
-    body1: {
-      color: '#333333'
-    },
-    h4: {
-      color: '#333333'
-    },
-    h3: {
-      color: '#333333'
-    },
-    h2: {
-      color: 'white',
-      fontSize: 11
-    }
+    // body1: {
+    //   color: '#333333'
+    // },
+    // h4: {
+    //   color: '#333333'
+    // },
+    // h3: {
+    //   color: '#333333'
+    // },
+    // h2: {
+    //   color: '#333333'
+    //   // fontSize: 11
+    // }
   },
   palette: {
     primary: {
@@ -56,9 +56,13 @@ const theme1 = createTheme({
     },
     secondary: {
       light: '#ff7961',
-      main: '#f44336',
-      dark: '#ba000d',
+      main: 'white',
+      dark: '#333333',
       contrastText: '#000'
+    },
+    text: {
+      primary: '#333333',
+      secondary: 'white'
     }
   },
   components: {

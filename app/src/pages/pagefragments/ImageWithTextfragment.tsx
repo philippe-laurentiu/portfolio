@@ -80,12 +80,12 @@ export const TitleLogoText = ({
     )
   }
 
-  let titleElement = <Typography gutterBottom={true} variant={'h4'}>
+  let titleElement = <Typography gutterBottom={true} variant={'h4'} color={'text.primary'}>
     {title}
   </Typography>
 
   if (text == null) {
-    titleElement = <Typography gutterBottom={true} variant={'h3'}>
+    titleElement = <Typography gutterBottom={true} variant={'h3'} color={'text.primary'}>
       {title}
     </Typography>
   }

@@ -11,7 +11,7 @@ export interface Props {
 export const TitleFragment = ({ children, variant }: Props): JSX.Element => {
   return (
     <Box width={'100%'} height={'100px'} textAlign={'center'}>
-      <Typography variant={variant} lineHeight={'90px'}>
+      <Typography variant={variant} lineHeight={'90px'} color={'text.primary'}>
         {children}
       </Typography>
     </Box>

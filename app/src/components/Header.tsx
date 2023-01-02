@@ -23,7 +23,7 @@ const Header = (): JSX.Element => {
         }}
       >
         <IconButton onClick={() => setToggleBurger(!toggleBurger)}>
-          <MenuIcon></MenuIcon>
+          <MenuIcon sx={{ color: 'white' }}></MenuIcon>
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           {t('welcome.title', { framework: 'React' })}

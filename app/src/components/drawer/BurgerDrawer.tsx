@@ -5,7 +5,9 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemButton from '@material-ui/core/ListItemButton'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
+import Box from '@material-ui/core/Box'
 import HomeIcon from '@material-ui/icons/Home'
+import { AssuredWorkload } from '@mui/icons-material'
 import { ToggleDrawer } from './Drawer'
 import { useNavigate } from 'react-router-dom'
 import { navigation } from '../../config'
@@ -21,7 +23,7 @@ const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
       PaperProps={{
         sx: {
           backgroundColor: 'primary.light',
-          width: '200px',
+          width: '250px',
           height: 'auto',
           marginTop: '64px'
         }
@@ -72,7 +74,9 @@ const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
           </ListItemButton>
         </ListItem>
         <ListItem divider>
-          <Typography>Projects</Typography>
+          <Box width={'100%'} textAlign={'center'} paddingTop={'20px'}>
+            <Typography variant={'h6'}>{at('Projects')}</Typography>
+          </Box>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton
@@ -81,6 +85,9 @@ const BurgerDrawer = ({ toggle, setToggle }: ToggleDrawer): JSX.Element => {
               navigate(navigation.proexample.path)
             }}
           >
+            <ListItemIcon>
+              <AssuredWorkload />
+            </ListItemIcon>
             <ListItemText primary={at('Project Example')} />
           </ListItemButton>
         </ListItem>
