@@ -26,7 +26,13 @@ export const TechnologyFragment = ({ technologies }: TechnologyFragmentInterface
           return (
             <Grid item key={key}>
               <Box sx={style}>
-                <img src={TechLogoEnum[techKey]} width={style.width} height={style.height}></img>
+                <a href={TechLogoEnum[techKey][1]}>
+                  <img
+                    src={TechLogoEnum[techKey][0]}
+                    width={style.width}
+                    height={style.height}
+                  ></img>
+                </a>
               </Box>
             </Grid>
           )

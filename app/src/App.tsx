@@ -49,8 +49,8 @@ const theme1 = createTheme({
   },
   palette: {
     primary: {
-      light: '#757ce8',
-      main: '#3f50b5',
+      light: '#A0A0A0', // secound background color
+      main: '#333333', // first background color
       dark: '#002884',
       contrastText: '#fff'
     },
@@ -102,23 +102,32 @@ const theme1 = createTheme({
 const App = (): JSX.Element => {
   initLanguage().catch(() => console.log('do some error handling'))
   return (
-      <ThemeProvider theme={theme1}>
-        <I18nextProvider i18n={i18next}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Pagelayout />}>
-                <Route index element={<Home />} />
-                <Route path={navigation.about.path} element={<About />} />
-                <Route path={navigation.legalnotice.path} element={<LeagalNotice />} />
-                <Route path={navigation.certificats.path} element={<Certificats />} />
-                <Route path={navigation.proexample.path} element={<ProExample />} />
-                <Route path="*" element={<ErrorPage />} />
-              </Route>
-              <Route path="*" element={<ErrorPage />} />
-            </Routes>
-          </BrowserRouter>
-        </I18nextProvider>
-      </ThemeProvider>
+    <ThemeProvider theme={theme1}>
+      <I18nextProvider i18n={i18next}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Pagelayout />}>
+              <Route index element={<Home />} />
+              <Route path={navigation.about.path} element={<About />} />
+              <Route
+                path={navigation.legalnotice.path}
+                element={<LeagalNotice />}
+              />
+              <Route
+                path={navigation.certificats.path}
+                element={<Certificats />}
+              />
+              <Route
+                path={navigation.proexample.path}
+                element={<ProExample />}
+              />
+              <Route path='*' element={<ErrorPage />} />
+            </Route>
+            <Route path='*' element={<ErrorPage />} />
+          </Routes>
+        </BrowserRouter>
+      </I18nextProvider>
+    </ThemeProvider>
   )
 }
 

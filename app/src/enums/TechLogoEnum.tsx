@@ -1,34 +1,49 @@
-import logo_react from 'src/assets/logos/logo_react.png'
-import logo_drupal from 'src/assets/logos/logo_drupal.png'
-import logo_formio from 'src/assets/logos/logo_formio.png'
-import logo_go from 'src/assets/logos/logo_go.png'
-import logo_js from 'src/assets/logos/logo_js.png'
-import logo_mysql from 'src/assets/logos/logo_mysql.png'
-import logo_php from 'src/assets/logos/logo_php.png'
-import logo_python from 'src/assets/logos/logo_python.png'
-import logo_symfony from 'src/assets/logos/logo_symfony.png'
+import bootstrap from 'src/assets/logos/bootstrap.svg'
+import c from 'src/assets/logos/c.svg'
+import css3 from 'src/assets/logos/css3.svg'
+import docker from 'src/assets/logos/docker.svg'
+import flutterio from 'src/assets/logos/flutterio.svg'
+import git from 'src/assets/logos/git.svg'
+import html5 from 'src/assets/logos/html5.svg'
+import mysql from 'src/assets/logos/mysql.svg'
+import nginx from 'src/assets/logos/nginx.svg'
+import nodejs from 'src/assets/logos/nodejs.svg'
+import php from 'src/assets/logos/php.svg'
+import python from 'src/assets/logos/python.svg'
+import react from 'src/assets/logos/react.svg'
+import webpack from 'src/assets/logos/webpack.svg'
 
 export interface TechLogoInterface {
-  react: string
-  drupal: string
-  formio: string
-  go: string
-  js: string
-  mysql: string
-  php: string
-  python: string
-  symfony: string
+  bootstrap: string[]
+  c: string[]
+  css3: string[]
+  docker: string[]
+  flutterio: string[]
+  git: string[]
+  html5: string[]
+  mysql: string[]
+  nginx: string[]
+  nodejs: string[]
+  php: string[]
+  python: string[]
+  react: string[]
+  webpack: string[]
 }
 const TechLogoEnum: TechLogoInterface = {
-  react: logo_react,
-  drupal: logo_drupal,
-  formio: logo_formio,
-  go: logo_go,
-  js: logo_js,
-  mysql: logo_mysql,
-  php: logo_php,
-  python: logo_python,
-  symfony: logo_symfony
+  bootstrap: [bootstrap, ''],
+  c: [c, ''],
+  css3: [css3, ''],
+  docker: [docker, ''],
+  flutterio: [flutterio, ''],
+  git: [git, ''],
+  html5: [html5, ''],
+  mysql: [mysql, ''],
+  nginx: [nginx, ''],
+  nodejs: [nodejs, ''],
+  php: [php, ''],
+  python: [python, ''],
+  react: [react, ''],
+  webpack: [webpack, '']
 }
 
 export default TechLogoEnum
