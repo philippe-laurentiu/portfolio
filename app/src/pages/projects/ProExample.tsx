@@ -1,9 +1,8 @@
 import React from 'react'
-import { ImageWithText, TwoBoxes, Title, Technology } from '../../components/PageFragments'
+import { OneBox, TwoBoxes, Title, Technology, TitleLogoText, Image } from '../../components/PageFragments'
 import Container from '@material-ui/core/Container' // todo @material-ui is not @mui/material
 import Box from '@mui/material/Box'
 import { useAutoTranslation } from '../../hooks/useAutoTranslation'
-import wspIhkHeader from '../../assets/projects/wsp/wsp_ihk_header.png'
 import wspWebsite from '../../assets/projects/wsp/wsp_website.png'
 
 const ProExampel = (): JSX.Element => {
@@ -12,36 +11,44 @@ const ProExampel = (): JSX.Element => {
   return (
     <Box>
       <Container>
-        <ImageWithText
-          height={100}
-          background={`url(${wspIhkHeader})`}
-          titleLogoText={{
-            title: at('Economic service portal')
-          }}
-        />
+        <OneBox background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}>
+          <Image
+            height={450}
+            projectImage={wspWebsite}
+            background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}
+          />
+           <TitleLogoText
+            title={at('test')}
+            text={at(
+              'test'
+            )}
+          ></TitleLogoText>
+        </OneBox>
+
         <Box paddingTop={'50px'}>
           <Title variant='h4'>{at('Project purpose')}</Title>
         </Box>
-        <ImageWithText
-          height={450}
-          projectImage={wspWebsite}
-          background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}
-          titleLogoText={{
-            title: at('Economic service portal'),
-            text: at(
+
+        <TwoBoxes background={'white'} orderDe={[1, 0]} orderMo={[0, 1]}>
+          <Image
+            height={450}
+            projectImage={wspWebsite}
+            background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}
+          />
+          <TitleLogoText
+            title={at('Economic service portal')}
+            text={at(
               'The Economic Service Portal.NRW is the central digital gateway for the economy in NRW.'
-            )
-          }}
-        />
+            )}
+          ></TitleLogoText>
+        </TwoBoxes>
+
         <Box paddingTop={'50px'}>
           <Title variant='h4'>{at('Technologies used')}</Title>
         </Box>
-        <TwoBoxes orderDe={[1, 0]} orderMo={[0, 1]}>
-          <Technology
-            technologies={[
-              'react'
-            ]}
-          ></Technology>
+
+        <TwoBoxes background={'white'} orderDe={[1, 0]} orderMo={[0, 1]}>
+          <Technology technologies={['react']}></Technology>
           <Technology technologies={['c']}></Technology>
         </TwoBoxes>
       </Container>

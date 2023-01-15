@@ -1,6 +1,12 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import { ImageWithText, Title } from '../components/PageFragments'
+import {
+  OneBox,
+  TwoBoxes,
+  Title,
+  Image,
+  TitleLogoText
+} from '../components/PageFragments'
 import { gradient } from '../utils/calculateGradient'
 import Box from '@mui/material/Box'
 import { useAutoTranslation } from '../hooks/useAutoTranslation'
@@ -15,28 +21,47 @@ const Home = (): JSX.Element => {
   return (
     <Box>
       <Container>
-        <ImageWithText
+        <TwoBoxes
+          orderDe={[0, 1]}
+          orderMo={[0, 1]}
+          background={gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')}
+        >
+          <Image
             height={250}
             projectImage={testImg}
-            background={gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')}
-            titleLogoText={{
-              title: at('Hi there, my name is Philippe!'),
-              text: at("I'm a software developer based in Kelowna, and  I create high-performance software with the newest technologies.")
-            }}
+            background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}
           />
-          <Title variant='h3'>{at('Projects')}</Title>
-          <ImageWithText
+          <TitleLogoText
+            title={at('Hi there, my name is Philippe!')}
+            text={at(
+              "I'm a software developer based in Kelowna, and  I create high-performance software with the newest technologies."
+            )}
+          ></TitleLogoText>
+        </TwoBoxes>
+
+        <Title variant='h3'>{at('Projects')}</Title>
+
+        <TwoBoxes
+          orderDe={[0, 1]}
+          orderMo={[0, 1]}
+          background={gradient(
+            'rgba(210,214,215,0) 40%',
+            'rgba(254,193,91,0.3) 100%'
+          )}
+        >
+          <Image
             height={250}
             projectImage={wspCover}
-            // background={gradient('rgba(214,216,215,0)', 'rgba(40,96,147,1)')}
-            // background={gradient('rgba(210,214,215,1) 40%', 'rgba(89,151,255,1) 100%')}
-            background={gradient('rgba(210,214,215,0) 40%', 'rgba(254,193,91,0.3) 100%')}
-            titleLogoText={{
-              title: at('Wirtschafts service portal'),
-              logo: wspLogo,
-              text: at('The Economic Service Portal.NRW is the central digital gateway for the economy in NRW.')
-            }}
+            background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}
           />
+          <TitleLogoText
+            title={at('Wirtschafts service portal')}
+            text={at(
+              'The Economic Service Portal.NRW is the central digital gateway for the economy in NRW.'
+            )}
+          ></TitleLogoText>
+        </TwoBoxes>
+
         <Box height='60px'></Box>
       </Container>
     </Box>
