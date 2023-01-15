@@ -1,12 +1,15 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
+import { checkMediaQuery } from 'src/utils/checkMediaQuery'
 
 export interface PropsBox {
+  orderDe: number[]
+  orderMo: number[]
   children: React.ReactNode[]
 }
 
-export const TwoBoxesFragment = ({ children }: PropsBox): JSX.Element => {
+export const TwoBoxesFragment = ({ children, orderDe, orderMo }: PropsBox): JSX.Element => {
   const style = {
     width: '400px',
     height: '250px',
@@ -16,6 +19,7 @@ export const TwoBoxesFragment = ({ children }: PropsBox): JSX.Element => {
     marginLeft: '50px',
     marginRight: '50px'
   }
+  const order = checkMediaQuery() ? orderDe : orderMo
 
   return (
     <Box width={'100%'} sx={{
@@ -24,12 +28,12 @@ export const TwoBoxesFragment = ({ children }: PropsBox): JSX.Element => {
       <Grid container justifyContent='center'>
         <Grid item>
           <Box sx={style}>
-            {children[0]}
+            {children[order[0]]}
           </Box>
         </Grid>
         <Grid item>
           <Box sx={style}>
-            {children[1]}
+            {children[order[1]]}
           </Box>
         </Grid>
       </Grid>

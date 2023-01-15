@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageWithText, TwoBoxes, Title, Technology } from '../PageFragments'
+import { ImageWithText, TwoBoxes, Title, Technology } from '../../components/PageFragments'
 import Container from '@material-ui/core/Container' // todo @material-ui is not @mui/material
 import Box from '@mui/material/Box'
 import { useAutoTranslation } from '../../hooks/useAutoTranslation'
@@ -36,13 +36,13 @@ const ProExampel = (): JSX.Element => {
         <Box paddingTop={'50px'}>
           <Title variant='h4'>{at('Technologies used')}</Title>
         </Box>
-        <TwoBoxes>
+        <TwoBoxes orderDe={[1, 0]} orderMo={[0, 1]}>
           <Technology
             technologies={[
               'react'
             ]}
           ></Technology>
-          <Technology technologies={['react']}></Technology>
+          <Technology technologies={['c']}></Technology>
         </TwoBoxes>
       </Container>
     </Box>

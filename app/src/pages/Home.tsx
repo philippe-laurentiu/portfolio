@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import { ImageWithText, Title } from './PageFragments'
+import { ImageWithText, Title } from '../components/PageFragments'
 import { gradient } from '../utils/calculateGradient'
 import Box from '@mui/material/Box'
 import { useAutoTranslation } from '../hooks/useAutoTranslation'
