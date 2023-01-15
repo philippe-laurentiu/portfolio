@@ -1,7 +1,5 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
-import Grid from '@material-ui/core/Grid'
-import AsymmetricImage from '../AsymmetricImage'
 
 export interface ImageInterface {
   height: number
@@ -30,21 +28,8 @@ export const ImageFragment = ({
   }
 
   return (
-    <Box
-      width={'100%'}
-      sx={{
-        backgroundImage: background
-      }}
-    >
-      <Grid container justifyContent='center'>
-        {projectImage != null && (
-          <Grid item>
-            <Box sx={style}>
-              <AsymmetricImage image={projectImage} />
-            </Box>
-          </Grid>
-        )}
-      </Grid>
+    <Box sx={style}>
+      {/* <AsymmetricImage image={projectImage} /> */}
     </Box>
   )
 }

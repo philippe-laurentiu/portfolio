@@ -1,16 +1,16 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 import {
-  OneBox,
   TwoBoxes,
   Title,
   Image,
   TitleLogoText
 } from '../components/PageFragments'
+import AsymmetricImage from 'src/components/AsymmetricImage'
 import { gradient } from '../utils/calculateGradient'
 import Box from '@mui/material/Box'
 import { useAutoTranslation } from '../hooks/useAutoTranslation'
-import wspLogo from '../assets/projects/wsp/logos/wsp_logo.svg'
+// import wspLogo from '../assets/projects/wsp/logos/wsp_logo.svg'
 import wspCover from '../assets/projects/wsp/wsp_cover.jpg'
 // import wspNet from '../assets/projects/wsp/wsp_net.jpg'
 import testImg from '../assets/test.jpg'
@@ -26,11 +26,12 @@ const Home = (): JSX.Element => {
           orderMo={[0, 1]}
           background={gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')}
         >
-          <Image
-            height={250}
+          {/* <Image
+            height={400}
             projectImage={testImg}
             background={"gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')"}
-          />
+          /> */}
+          <AsymmetricImage image={testImg} />
           <TitleLogoText
             title={at('Hi there, my name is Philippe!')}
             text={at(
