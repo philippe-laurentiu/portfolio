@@ -7,21 +7,19 @@ import { useTranslation } from 'react-i18next'
 import BurgerDrawer from './drawer/BurgerDrawer'
 import LanguageDrawer from './drawer/LanguageDrawer'
 import Drawer from './drawer/Drawer'
+import useScreenSize from '../hooks/useScreenSize'
 
 const Header = (): JSX.Element => {
+  const test = useScreenSize()
+  console.log(test)
   const [t] = useTranslation('common')
   const [toggleBurger, setToggleBurger] = useState(false)
   const [toggleLanguage, setToggleLanguage] = useState(false)
 
   return (
-    <AppBar position="static">
-      <Toolbar
-        sx={{
-          height: '50px',
-          minHeight: '50px',
-          backgroundColor: 'primary.main'
-        }}
-      >
+    <AppBar position="fixed">
+      <div>
+      <Toolbar>
         <IconButton onClick={() => setToggleBurger(!toggleBurger)}>
           <MenuIcon sx={{ color: 'white' }}></MenuIcon>
         </IconButton>
@@ -36,6 +34,7 @@ const Header = (): JSX.Element => {
           <TranslateIcon />
         </Button>
       </Toolbar>
+      </div>
       <Drawer>
         <BurgerDrawer toggle={toggleBurger} setToggle={setToggleBurger} />
         <LanguageDrawer toggle={toggleLanguage} setToggle={setToggleLanguage} />

@@ -66,6 +66,17 @@ const theme1 = createTheme({
     }
   },
   components: {
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          minHeight: 100,
+          '@media (min-width:600px)': {
+            minHeight: 100,
+          },
+          backgroundColor: 'blue'
+        }
+      }
+    },
     MuiContainer: {
       defaultProps: {
         maxWidth: false,
