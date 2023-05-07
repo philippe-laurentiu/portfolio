@@ -16,8 +16,6 @@ export const TwoBoxesFragment = ({
   orderMo,
   background
 }: TwoBoxInterface): JSX.Element => {
-
-  
   const style1 = {
     width: '400px',
     height: '450px',
@@ -37,7 +35,6 @@ export const TwoBoxesFragment = ({
     marginLeft: '50px',
     marginRight: '50px'
   }
-
 
   const order = checkMediaQuery() ? orderDe : orderMo
 

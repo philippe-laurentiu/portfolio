@@ -22,7 +22,7 @@ const Home = (): JSX.Element => {
     <Box>
       <Container>
         <TwoBoxes
-          orderDe={[0, 1]}
+          orderDe={[1, 0]}
           orderMo={[0, 1]}
           background={gradient('rgba(0,0,0,0)', 'rgba(0,0,0,0)')}
         >

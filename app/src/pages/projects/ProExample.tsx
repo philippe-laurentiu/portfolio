@@ -48,8 +48,8 @@ const ProExampel = (): JSX.Element => {
         </Box>
 
         <TwoBoxes background={'white'} orderDe={[1, 0]} orderMo={[0, 1]}>
+          <Technology technologies={['c', 'react', 'docker', 'php']}></Technology>
           <Technology technologies={['react']}></Technology>
-          <Technology technologies={['c']}></Technology>
         </TwoBoxes>
       </Container>
     </Box>
