@@ -30,6 +30,9 @@ const initLanguage = async (): Promise<any> => {
     }
   })
 }
+// const brakePointS = 123
+// const brakePointM = 345
+// const brakePointL = 456
 
 const theme1 = createTheme({
   typography: {
@@ -71,9 +74,9 @@ const theme1 = createTheme({
         root: {
           minHeight: 100,
           '@media (min-width:600px)': {
-            minHeight: 100,
+            minHeight: 100
           },
-          backgroundColor: 'blue'
+          backgroundColor: '#F9F8F5'
         }
       }
     },

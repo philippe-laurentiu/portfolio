@@ -18,7 +18,6 @@ const Footer = (): JSX.Element => {
     setValue(getValueForRoute(currentPath))
   }, [currentPath])
 
-  console.log(value)
   return (
     <Box>
       <BottomNavigation
